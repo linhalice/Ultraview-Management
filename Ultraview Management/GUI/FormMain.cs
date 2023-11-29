@@ -164,9 +164,6 @@ namespace Ultraview_Management.GUI
                     SaveData();
                     LoadData();
                 }
-
-
-
             }
             catch (Exception ex)
             {

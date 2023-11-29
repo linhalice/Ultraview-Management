@@ -67,7 +67,7 @@ namespace Ultraview_Management.GUI
                     string usernameInFile = lineDataSplit[1];
                     string passwordInFile = lineDataSplit[2];
 
-                    if (nameInFile == name || usernameInFile == username || passwordInFile == password)
+                    if (nameInFile == name || usernameInFile == username)
                     {
                         MessageBox.Show("Không thể thêm một sever mới có thông tin trùng với sever cũ");
                         return;

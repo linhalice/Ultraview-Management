@@ -76,7 +76,7 @@ namespace Ultraview_Management.GUI
                     string usernameInFile = lineDataSplit[1];
                     string passwordInFile = lineDataSplit[2];
 
-                    if (nameInFile == name || usernameInFile == username || passwordInFile == password)
+                    if (nameInFile == name || usernameInFile == username )
                     {
                         MessageBox.Show("Bạn đang sửa thông tin của sever này giống một sever đã tồn tại!","Cảnh báo!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     }
