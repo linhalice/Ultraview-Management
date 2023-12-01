@@ -305,10 +305,17 @@ namespace Ultraview_Management.GUI
         {
             if (e.ColumnIndex == dataGridView1.Columns["clButtonDelete"].Index && e.RowIndex >= 0)
             {
-                // Xoá dòng tương ứng với nút được click
-                dataGridView1.Rows.RemoveAt(e.RowIndex);
-                SaveData();
-                LoadData();
+                // Hiển thị hộp thoại xác nhận
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa dòng này?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+
+                // Kiểm tra xem người dùng đã xác nhận xóa hay không
+                if (result == DialogResult.Yes)
+                {
+                    // Xoá dòng tương ứng với nút được click
+                    dataGridView1.Rows.RemoveAt(e.RowIndex);
+                    SaveData();
+                    LoadData();
+                }
             }
 
             if (e.ColumnIndex == dataGridView1.Columns["clButtonEdit"].Index && e.RowIndex >= 0)
